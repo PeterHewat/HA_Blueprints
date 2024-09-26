@@ -2,7 +2,7 @@ blueprint:
   name: 4-Button Scene Switch by MOES
   description: Automate your 4-Button Scene Switch by MOES using ZHA events.
   domain: automation
-  source_url: https://github.com/PeterHewat/HA_Blueprints/blob/main/zha-tuya-4-button-scene-switch-ts0044-moes.yaml
+  source_url: https://github.com/PeterHewat/HA_Blueprints/blob/main/MOES/zha-tuya-4-button-scene-switch-ts0044-moes.yaml
   input:
     4button_scene_switch:
       name: 4-Button Scene Switch
