@@ -16,17 +16,76 @@ blueprint:
 
     # Actions
     button_1_short_press:
+      name: Actions for Button 1 Short Press
+      default:
+      selector:
+        action:
+
     button_1_double_press:
+      name: Actions for Button 1 Double Press
+      default:
+      selector:
+        action:
+
     button_1_long_press:
+      name: Actions for Button 1 Long Press
+      default:
+      selector:
+        action:
+
     button_2_short_press:
+      name: Actions for Button 2 Short Press
+      default:
+      selector:
+        action:
+
     button_2_double_press:
+      name: Actions for Button 2 Double Press
+      default:
+      selector:
+        action:
+
     button_2_long_press:
+      name: Actions for Button 2 Long Press
+      default:
+      selector:
+        action:
+
     button_3_short_press:
+      name: Actions for Button 3 Short Press
+      default:
+      selector:
+        action:
+
     button_3_double_press:
+      name: Actions for Button 3 Double Press
+      default:
+      selector:
+        action:
+
     button_3_long_press:
+      name: Actions for Button 3 Long Press
+      default:
+      selector:
+        action:
+
     button_4_short_press:
+      name: Actions for Button 4 Short Press
+      default:
+      selector:
+        action:
+
     button_4_double_press:
+      name: Actions for Button 4 Double Press
+      default:
+      selector:
+        action:
+
     button_4_long_press:
+      name: Actions for Button 4 Long Press
+      default:
+      selector:
+        action:
 
 mode: parallel
 max: 10
