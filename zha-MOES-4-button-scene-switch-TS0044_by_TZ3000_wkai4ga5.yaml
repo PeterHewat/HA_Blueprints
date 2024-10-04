@@ -1,9 +1,8 @@
 blueprint:
-  name: TS0044 Zigbee Remote
-  description: Configure actions for TS0044
+  name: 4-Button Scene Switch by MOES
+  description: Automate your 4-Button Scene Switch by MOES using ZHA events.
   domain: automation
-  source_url: https://github.com/PeterHewat/HA_Blueprints/blob/main/MOES/zha-tuya-4-button-scene-switch-ts0044-moes2.yaml
-  author: Zachary Priddy
+  source_url: https://github.com/PeterHewat/HA_Blueprints/blob/main/zha-MOES-4-button-scene-switch-TS0044_by_TZ3000_wkai4ga5.yaml
   input:
     ts0044_device:
       name: TS0044 Remote
@@ -14,7 +13,7 @@ blueprint:
 
     # Actions
     button_1_press:
-      name: Actions for Button 1 Pressed
+      name: Actions for Button 1 Short Pressed
       default:
       selector:
         action:
@@ -32,7 +31,7 @@ blueprint:
         action:
 
     button_2_press:
-      name: Actions for Button 2 Pressed
+      name: Actions for Button 2 Short Pressed
       default:
       selector:
         action:
@@ -50,7 +49,7 @@ blueprint:
         action:
 
     button_3_press:
-      name: Actions for Button 3 Pressed
+      name: Actions for Button 3 Short Pressed
       default:
       selector:
         action:
@@ -68,7 +67,7 @@ blueprint:
         action:
 
     button_4_press:
-      name: Actions for Button 4 Pressed
+      name: Actions for Button 4 Short Pressed
       default:
       selector:
         action:
