@@ -12,74 +12,74 @@ blueprint:
             model: TS0044
 
     # Actions
-    button_1_press:
-      name: Actions for Button 1 Short Pressed
+    button_1_short_press:
+      name: Actions for Button 1 Short Press
       default:
       selector:
         action:
 
     button_1_double_press:
-      name: Actions for Button 1 Double Pressed
+      name: Actions for Button 1 Double Press
       default:
       selector:
         action:
 
-    button_1_held:
-      name: Actions for Button 1 Held
+    button_1_long_press:
+      name: Actions for Button 1 Long Press
       default:
       selector:
         action:
 
-    button_2_press:
-      name: Actions for Button 2 Short Pressed
+    button_2_short_press:
+      name: Actions for Button 2 Short Press
       default:
       selector:
         action:
 
     button_2_double_press:
-      name: Actions for Button 2 Double Pressed
+      name: Actions for Button 2 Double Press
       default:
       selector:
         action:
 
-    button_2_held:
-      name: Actions for Button 2 Held
+    button_2_long_press:
+      name: Actions for Button 2 Long Press
       default:
       selector:
         action:
 
-    button_3_press:
-      name: Actions for Button 3 Short Pressed
+    button_3_short_press:
+      name: Actions for Button 3 Short Press
       default:
       selector:
         action:
 
     button_3_double_press:
-      name: Actions for Button 3 Double Pressed
+      name: Actions for Button 3 Double Press
       default:
       selector:
         action:
 
-    button_3_held:
-      name: Actions for Button 3 Held
+    button_3_long_press:
+      name: Actions for Button 3 Long Press
       default:
       selector:
         action:
 
-    button_4_press:
-      name: Actions for Button 4 Short Pressed
+    button_4_short_press:
+      name: Actions for Button 4 Short Press
       default:
       selector:
         action:
 
     button_4_double_press:
-      name: Actions for Button 4 Double Pressed
+      name: Actions for Button 4 Double Press
       default:
       selector:
         action:
 
-    button_4_held:
-      name: Actions for Button 4 Held
+    button_4_long_press:
+      name: Actions for Button 4 Long Press
       default:
       selector:
         action:
@@ -94,19 +94,19 @@ trigger:
     platform: device
     type: remote_button_short_press
     subtype: button_1
-    id: b1-1
+    id: b1-S
   - device_id: !input ts0044_device
     domain: zha
     platform: device
     type: remote_button_double_press
     subtype: button_1
-    id: b1-2
+    id: b1-D
   - device_id: !input ts0044_device
     domain: zha
     platform: device
     type: remote_button_long_press
     subtype: button_1
-    id: b1-h
+    id: b1-L
 
     # Button 2
   - device_id: !input ts0044_device
@@ -114,19 +114,19 @@ trigger:
     platform: device
     type: remote_button_short_press
     subtype: button_2
-    id: b2-1
+    id: b2-S
   - device_id: !input ts0044_device
     domain: zha
     platform: device
     type: remote_button_double_press
     subtype: button_2
-    id: b2-2
+    id: b2-D
   - device_id: !input ts0044_device
     domain: zha
     platform: device
     type: remote_button_long_press
     subtype: button_2
-    id: b2-h
+    id: b2-L
 
     # Button 3
   - device_id: !input ts0044_device
@@ -134,19 +134,19 @@ trigger:
     platform: device
     type: remote_button_short_press
     subtype: button_3
-    id: b3-1
+    id: b3-S
   - device_id: !input ts0044_device
     domain: zha
     platform: device
     type: remote_button_double_press
     subtype: button_3
-    id: b3-2
+    id: b3-D
   - device_id: !input ts0044_device
     domain: zha
     platform: device
     type: remote_button_long_press
     subtype: button_3
-    id: b3-h
+    id: b3-L
 
     # Button 4
   - device_id: !input ts0044_device
@@ -154,19 +154,19 @@ trigger:
     platform: device
     type: remote_button_short_press
     subtype: button_4
-    id: b4-1
+    id: b4-S
   - device_id: !input ts0044_device
     domain: zha
     platform: device
     type: remote_button_double_press
     subtype: button_4
-    id: b4-2
+    id: b4-D
   - device_id: !input ts0044_device
     domain: zha
     platform: device
     type: remote_button_long_press
     subtype: button_4
-    id: b4-h
+    id: b4-L
 
 action:
   - choose:
@@ -174,66 +174,66 @@ action:
       - conditions:
           - condition: trigger
             id:
-              - b1-1
-        sequence: !input button_1_press
+              - b1-S
+        sequence: !input button_1_short_press
       - conditions:
           - condition: trigger
             id:
-              - b1-2
+              - b1-D
         sequence: !input button_1_double_press
       - conditions:
           - condition: trigger
             id:
-              - b1-h
-        sequence: !input button_1_held
+              - b1-L
+        sequence: !input button_1_long_press
 
       # Button 2
       - conditions:
           - condition: trigger
             id:
-              - b2-1
-        sequence: !input button_2_press
+              - b2-S
+        sequence: !input button_2_short_press
       - conditions:
           - condition: trigger
             id:
-              - b2-2
+              - b2-D
         sequence: !input button_2_double_press
       - conditions:
           - condition: trigger
             id:
-              - b2-h
-        sequence: !input button_2_held
+              - b2-L
+        sequence: !input button_2_long_press
 
       # Button 3
       - conditions:
           - condition: trigger
             id:
-              - b3-1
-        sequence: !input button_3_press
+              - b3-S
+        sequence: !input button_3_short_press
       - conditions:
           - condition: trigger
             id:
-              - b3-2
+              - b3-D
         sequence: !input button_3_double_press
       - conditions:
           - condition: trigger
             id:
-              - b3-h
-        sequence: !input button_3_held
+              - b3-L
+        sequence: !input button_3_long_press
 
       # Button 4
       - conditions:
           - condition: trigger
             id:
-              - b4-1
-        sequence: !input button_4_press
+              - b4-S
+        sequence: !input button_4_short_press
       - conditions:
           - condition: trigger
             id:
-              - b4-2
+              - b4-D
         sequence: !input button_4_double_press
       - conditions:
           - condition: trigger
             id:
-              - b4-h
-        sequence: !input button_4_held
+              - b4-L
+        sequence: !input button_4_long_press
